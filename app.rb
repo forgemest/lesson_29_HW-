@@ -1,9 +1,15 @@
 require 'sinatra'
 require 'sinatra/reloader'
-get '/' do
+get '/index' do
 	erb :index
 end
 
-get '/about' do
-	erb :about
+get '/visit' do
+	erb :visit
 end
+
+get '/contacts' do
+	erb :contacts
+end
+
+
