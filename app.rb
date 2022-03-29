@@ -1,6 +1,15 @@
+require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
-get '/index' do
+require 'sinatra/activerecord'
+
+set :database, {adapter: "sqlite3", database: "barbershop.db"}
+
+class Client < ActiveRecord::Base
+end
+
+
+get '/' do
 	erb :index
 end
 
